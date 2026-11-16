@@ -1,0 +1,25 @@
+<div class="chat-container">
+  <h2>Angular AI Assistant</h2>
+
+  <textarea [(ngModel)]="prompt" placeholder="Ask something..." rows="4"> </textarea>
+
+  <button (click)="sendMessage()" [disabled]="loading() || !prompt.trim()">Send Message</button>
+
+  @if (loading()) {
+    <p>AI is thinking...</p>
+  }
+
+  @if (response()) {
+    <div class="ai-response">
+      <h3>AI Response</h3>
+
+      <p>{{ response() }}</p>
+    </div>
+  }
+
+  @if (errorMessage) {
+    <p class="error">
+      {{ errorMessage }}
+    </p>
+  }
+</div>

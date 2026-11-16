@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+.chat-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 12px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ai-response {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f1f5f9;
+  border-radius: 8px;
+}
+
+.error {
+  color: red;
+}
